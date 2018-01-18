@@ -1,0 +1,268 @@
+// The MIT License (MIT)
+//
+// Copyright (c) 2011-2014 Webcomm Pty Ltd
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+@import "@{bootstrap-path}/variables.less";
+
+//
+// Variables
+// --------------------------------------------------
+
+@logoWidth: 240px;
+
+// Normal-Menu
+@submenublocksize: 217px;
+
+// Global values
+// --------------------------------------------------
+
+// Colors
+// -------------------------
+/*
+@color-red: #F07873;
+@color-blue: #374858;
+@color-blue-light: fade(@color-blue, 50%);
+@color-blue-lightest: fade(@color-blue, 30%);
+@color-gray: #F2F2F2;
+@color-gray-light: fade(@color-gray, 50%);
+*/
+@color-red: #F07873;
+@color-blue: #374858;
+@color-light-text: #737F8A;
+@color-blue-light: #9BA3AB;
+@color-blue-lightest: #C3C8CD;
+@color-blue-ultralight: #EBEDEF;
+@color-gray: #F2F2F2;
+@color-gray-light: #F9F9F9;
+
+@color-border-horizontal: fade(@color-blue, 30%);
+@color-border-vertical: fade(@color-blue, 15%);
+
+// Fonts
+// ---------------
+/*
+@font-face {
+  font-family: TradeGothic;
+  src: url('../fonts/TradeGothicLTPro-Cn18.eot#') format("eot"),
+        url('../fonts/TradeGothicLTPro-Cn18.woff') format("woff"),
+        url('../fonts/TradeGothicLTPro-Cn18.ttf') format("truetype");
+
+
+}
+
+*/
+
+@font-face {
+  font-family: 'Kapten';
+  src: url('../fonts/kapten.eot');
+  src: url('../fonts/kapten.eot#iefix') format('embedded-opentype'),
+  url('../fonts/kapten.ttf') format('truetype'),
+  url('../fonts/kapten.woff') format('woff'),
+  url('../fonts/kapten.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v8/5hX15RUpPERmeybVlLQEWBkAz4rYn47Zy2rvigWQf6w.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v8/fU0HAfLiPHGlZhZpY6M7dBkAz4rYn47Zy2rvigWQf6w.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v8/CPRt--GVMETgA6YEaoGitxkAz4rYn47Zy2rvigWQf6w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v8/I-OtoJZa3TeyH6D9oli3iXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(https://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpPZraR2Tg8w2lzm7kLNL0-w.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(https://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpF4sYYdJg5dU2qzJEVSuta0.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(https://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpKE8kM4xWR1_1bYURRojRGc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(https://fonts.gstatic.com/s/ptserif/v8/QABk9IxT-LFTJ_dQzv7xpIgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v8/O_WhD9hODL16N4KLHLX7xQsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v8/3Nwg9VzlwLXPq3fNKwVRMAsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v8/b31S45a_TNgaBApZhTgE6AsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v8/03aPdn7fFF3H6ngCgAlQzAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+//@import url(//fonts.googleapis.com/css?family=PT+Serif);
+
+@font-serif: 'PT Serif', serif;
+@font-non-serif: TradeGothic;
+@font-non-serif-bold: TradeGothicLTPro-Bold;
+@font-freeland: Freeland;
+
+@font-family-sans-serif:  @font-serif;
+@font-family-serif:       @font-serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+
+@link-hover-decoration: none;
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Popovers
+// -------------------------
+@popover-max-width:                   400px;
+
+// ID Definitions for styles
+// -------------------------
+
+@watch-face-color-id: ~'color_watchface';
+@watch-body-color-id: ~'color_case';
+@watch-strap-type-id: ~'strap_type';
+@watch-strap-color-id: ~'strap_colors';
+@watch-strap-id: ~'16';
+
+@watch-circles-black-id: ~'watch_black';
+@watch-circles-white-id: ~'watch_white';
+@watch-circles-silver-id: ~'watch_silver';
+
+@sunglasses-circles-glass-black-id: ~'sunglasses_glass_black';
+@sunglasses-circles-glass-red-mirror-id: ~'sunglasses_glass_red-mirror';
+@sunglasses-circles-glass-blue-mirror-id: ~'sunglasses_glass_blue-mirror';
+@sunglasses-circles-glass-green-id: ~'sunglasses_glass_green';
+@sunglasses-circles-glass-silver-mirror-id: ~'sunglasses_glass_silver-mirror';
+@sunglasses-circles-glass-brown-id: ~'sunglasses_glass_brown';
+@sunglasses-circles-glass-revo-id: ~'sunglasses_glass_revo';
+@sunglasses-circles-glass-pink-mirror-id: ~'sunglasses_glass_pink-mirror';
+@sunglasses-circles-glass-pink-id: ~'sunglasses_glass_pink';
+
+@sunglasses-circles-frame-black-id: ~'sunglasses_frame_black';
+@sunglasses-circles-frame-matt-black-id: ~'sunglasses_frame_matt-black';
+@sunglasses-circles-frame-light-tortoise-id: ~'sunglasses_frame_light-tortoise';
+@sunglasses-circles-frame-matt-tortoise-id: ~'sunglasses_frame_matt-tortoise';
+@sunglasses-circles-frame-matt-gold-id: ~'sunglasses_frame_matt-gold';
+@sunglasses-circles-frame-crystal-id: ~'sunglasses_frame_crystal';
+@sunglasses-circles-frame-grey-id: ~'sunglasses_frame_grey';
+@sunglasses-circles-frame-white-id: ~'sunglasses_frame_white';
+@sunglasses-circles-frame-pink-id: ~'sunglasses_frame_pink';
+
+// Device Sizes
+@screen-xs: 767px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+
+@filter-category-select-bar-height: 75px;
+
+@menu-height: 172px;
+@burger-menu-height: 80px;

@@ -1,0 +1,612 @@
+// The MIT License (MIT)
+//
+// Copyright (c) 2011-2014 Webcomm Pty Ltd
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+/* CMS Home Page */
+.cms-home,
+.cms-index-index {
+  .subtitle {
+
+  }
+}
+
+// Sitemap
+.page-sitemap {
+  .links {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .sitemap {
+
+    .catalog-seo-sitemap-product & {
+      .make-row();
+
+      li {
+        .make-md-column(6);
+      }
+    }
+
+    .catalog-seo-sitemap-category & {
+      .make-row();
+
+      li {
+        .make-sm-column(3);
+        .make-md-column(2);
+
+        &.level-0 {
+          font-weight: bold;
+          margin-top: (@line-height-computed / 2);
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    @media (min-width: @screen-md) {
+
+      li {
+        &.level-0,
+        &.level-1,
+        &.level-2,
+        &.level-3,
+        &.level-4 {
+          width: auto;
+          float: none;
+        }
+
+        &.level-0 {
+          padding-left: (@grid-gutter-width / 2) !important;
+        }
+        &.level-1 {
+          padding-left: (@grid-gutter-width / 2) + 20px !important;
+        }
+        &.level-2 {
+          padding-left: (@grid-gutter-width / 2) + 40px !important;
+        }
+        &.level-3 {
+          padding-left: (@grid-gutter-width / 2) + 60px !important;
+        }
+        &.level-4 {
+          padding-left: (@grid-gutter-width / 2) + 80px !important;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+
+// RSS
+.rss-title h1 { background:url(../../images/i_rss-big.png) 0 4px no-repeat; padding-left:27px; }
+.rss-table .link-rss { display:block; line-height:1.55; background-position:0 4px; }
+
+// Static Pages
+.contentpage {
+  padding-bottom: 30px;
+
+  .strong-text {
+    font-weight: bold;
+  }
+  a {
+    color: @color-blue;
+
+    &:hover {
+      color: @color-red;
+    }
+  }
+
+  table {
+    overflow: scroll;
+  }
+
+  th, td {
+    padding: 6px;
+
+    @media(min-width: @screen-md-min) {
+      padding: 20px;
+    }
+  }
+
+  ol {
+    padding-left: 40px;
+  }
+
+  .h1 {
+    text-align: center;
+
+    &.multiple {
+      margin-top: 40px;
+    }
+  }
+
+  .h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @media(min-width: @screen-md-min) {
+      margin-top: 54px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .copytext-small {
+    padding-left: 1em;
+    &.ol-heading {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .small-text {
+    font-size: 0.9em;
+    padding-left:1.2em !important;
+  }
+  .red {
+    color: @color-red;
+  }
+
+  .image-wrapper {
+    display: table;
+    width: 100%;
+
+    .image-area {
+      color: #ffffff;
+      display: table-cell;
+      height: 300px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+
+
+  .number {
+    color: @color-blue;
+    font-weight: bold;
+  }
+
+  .text-box {
+    border: 1px solid @color-blue;
+    margin-bottom: 40px;
+    padding: 0 20px;
+
+    .h1 {
+      margin: 40px 0;
+    }
+  }
+
+  .data {
+    margin-bottom: 40px;
+  }
+
+  .bank-data {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+
+    &.last {
+      float: none;
+    }
+  }
+
+  .clearer {
+    clear: both;
+  }
+
+  // FAQ
+  &.faq {
+    a {
+      color: @color-blue-light;
+      font-family: PT sans-serif;
+      letter-spacing: 0;
+    }
+
+    table {
+      color: @color-blue-light;
+    }
+
+    .link-red {
+      color: @color-red;
+
+      &:hover {
+        color: @color-blue;
+      }
+    }
+
+    .underline {
+      margin-top: 20px;
+      text-decoration: underline;
+
+      &.videoheading {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        font-Family: TradeGothic;
+        color: #374858;
+        letter-spacing: 2px;
+        padding-left: 0.7em;
+        text-align: center;
+      }
+    }
+
+    .oneline {
+      margin: 0;
+      padding: 0;
+      padding-left: 1em;
+    }
+
+    .copytext-small {
+      margin-bottom: 0;
+      font-family: 'PT Serif';
+    }
+
+    .video {
+      margin-bottom: 40px;
+    }
+  .videocontainer {
+    padding-left: 1em;
+    text-align: center;
+    margin: 1em 0 5em 0;
+
+    iframe {
+      max-width: 100%;
+      width: 854px;
+      height: 480px;
+      border-color: transparent;
+    }
+  }
+    .accordion {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+
+        &:before {
+          content: "• ";
+          color: @color-blue-light;
+          font-size: 25px;
+        }
+
+
+        .collapse {
+          .collapse-detail {
+            border-top: 1px solid @color-border-horizontal;
+            border-bottom: 1px solid @color-border-horizontal;
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+
+            overflow: hidden;
+            clear: both;
+          }
+
+          &.last {
+            border-bottom: none;
+            padding-bottom: 0;
+
+          }
+
+
+        }
+        .collapsing {
+          border-top: 1px solid @color-border-horizontal;
+          border-bottom: 1px solid @color-border-horizontal;
+          padding-top: 1.5em;
+          margin-top: 0.5em;
+          overflow: hidden;
+          clear: both;
+
+
+        }
+
+        ol {
+          li {
+            &:before {
+              content: "";
+            }
+          }
+        }
+
+        &.last {
+          margin-bottom: 30px;
+
+          @media(min-width: @screen-md-min) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .faq-link {
+        &.active {
+          color: @color-red;
+        }
+
+        &:hover {
+          color: @color-red;
+        }
+      }
+    }
+
+    .h1 {
+      margin-bottom: 40px;
+    }
+
+    .h3 {
+      font-family: TradeGothic;
+      font-size: 1.6em;
+      border-bottom: 1px solid @color-border-horizontal;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+
+      @media(min-width: @screen-md-min) {
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+      }
+    }
+
+    .strapchange {
+      background: url('../images/change_strap.jpg') no-repeat center center;
+      background-size: 450px;
+      height: 200px;
+    }
+  }
+
+  // Jobs
+  &.jobs {
+    .h2 {
+      margin-top: 0;
+
+      &.kontakt {
+        margin-top: 56px;
+        margin-bottom: 30px;
+        text-align: center;
+
+        @media(min-width: @screen-md-min) {
+          margin-top: 90px;
+        }
+      }
+
+      &.subheader {
+        font-size: 17px;
+      }
+    }
+
+    .image-area {
+      background: url('../images/jobsimage.jpg') no-repeat center center;
+      background-size: 100%;
+      color: #ffffff;
+      display: table-cell;
+      padding-bottom: 30px;
+      text-align: center;
+      vertical-align: bottom;
+      width: 335px;
+
+      @media(min-width: @screen-md-min) {
+        height: 668px;
+        padding-bottom: 125px;
+      }
+    }
+
+    .first-text {
+      margin-top: 40px;
+
+      @media(min-width: @screen-md-min) {
+        margin-top: 100px;
+      }
+    }
+
+    .seperator-area {
+      margin-top: 56px;
+      margin-bottom: 56px;
+
+      @media(min-width: @screen-md-min) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+    }
+
+    .jobs-listing {
+      margin-top: 30px;
+      list-style: none;
+      padding-left: 0;
+
+      .job {
+        margin-bottom: 20px;
+        min-height: 56px;
+        text-align: center;
+        width: 100%;
+
+        .job-title {
+          border: 1px solid @color-blue;
+          display: block;
+          padding: 10px;
+
+          &[aria-expanded="true"] {
+            border: none;
+          }
+        }
+
+        .collapse {
+          background: @color-gray-light;
+          margin-bottom: 40px;
+          padding: 15px;
+          text-align: left;
+
+          .requirement {
+            margin-bottom: 10px;
+          }
+        }
+
+        .interest {
+          background: #ffffff;
+          margin-bottom: 20px;
+          padding: 15px;
+
+          .h2 {
+            margin-top: 25px;
+            margin-bottom: 30px;
+          }
+
+          .btn-normal {
+            background: @color-red;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media(min-width: @screen-md-min) {
+      .small-area {
+          margin-top: 80px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 500px;
+      }
+    }
+  }
+
+  &.commingsoon {
+    .hello {
+      margin-top: 125px;
+      margin-bottom: 85px;
+    }
+
+    .image-wrapper {
+      .image-area {
+        background: url('../images/road-sunset-desert-travelling.jpeg') no-repeat center center;
+        background-size: 100%;
+        height: 500px;
+      }
+    }
+
+    .main-text {
+      text-align: center;
+    }
+  }
+
+  &.changestraps {
+    .image-area {
+      background: url('../images/changestrapheadermobile.jpg') no-repeat center center;
+      background-size: 100%;
+      height: 400px;
+      margin: 0 -15px;
+
+      .image-text {
+        color: #ffffff;
+        position: relative;
+        top: 225px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 200px;
+
+        @media(min-width: @screen-sm-min) {
+          top: 390px;
+          left: 70px;
+          margin-left: 0;
+          width: 420px;
+        }
+      }
+
+      @media(min-width: @screen-sm-min) {
+        background: url('../images/changestrapheaderdesktop.jpg') no-repeat center center;
+        background-size: 100%;
+        height: 655px;
+      }
+    }
+
+    .instruction {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+
+      .font-h1 {
+        @media(min-width: @screen-sm-min) {
+          margin-bottom: 20px;
+          .font-h2;
+        }
+      }
+
+      .video {
+        margin-top: 30px;
+
+        @media(min-width: @screen-sm-min) {
+          margin-top: 40px;
+        }
+      }
+
+      &.first {
+        margin-top: 40px;
+
+        @media(min-width: @screen-sm-min) {
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}
+
+[id^=tsbadge4] {
+  right: 25px !important;
+}
+
+.seperator-area {
+  background:url('../images/seperator_mobil@2x.svg') no-repeat;
+  background-position-x: -5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 20px;
+
+  @media(min-width: @screen-md-min) {
+    background:url('../images/seperator_desktop.svg') no-repeat;
+    background-position-x: -23px;
+    margin-top: 54px;
+    margin-bottom: 54px;
+  }
+}
+
+[id^=tsbadge4] {
+  right: 25px !important;
+}
+
+.newsletter-raffle {
+  form {
+    table {
+      td {
+        padding-top: 0!important;
+
+        &.error {
+          padding: 0 20px!important;
+        }
+      }
+    }
+  }
+}

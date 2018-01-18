@@ -1,0 +1,40 @@
+#kapten-rma {
+  margin: 50px 0;
+
+  .top-50 {
+    margin-top: 50px;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  form {
+    .row {
+      margin-top: 10px;
+    }
+
+    input[type=text], select:not(.qty), textarea {
+      width: 100%;
+    }
+
+    textarea {
+      height: 100px;
+    }
+  }
+
+  .info-text {
+    padding: 25px 15px;
+    font-weight: bold;
+  }
+
+  .error-text {
+    color: @color-red;
+  }
+
+  #kapten_rma_reasons {
+    div[id^=kapten_rma_product_reason_] {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,316 @@
+.aspect-ratio(@width, @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+  }
+  > .ratio-content {
+    position: absolute;
+    padding:10px;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
+    span:before{
+      content:"@{width}";
+    }
+
+    span:after{
+      content:"@{height}";
+    }
+  }
+}
+
+.cartcrossseller {
+  background: white;
+  font-size: 0.8em;
+
+  .product-rail {
+    @media(min-width: @screen-md-min) {
+      border-top: 1px solid @color-blue;
+    }
+  }
+
+  .row {
+    margin: 0 !important;
+  }
+
+  .call-to-action {
+    padding: 0 !important;
+  }
+
+  .slick-slide {
+    outline: none;
+    .user-select(none);
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .product-entry {
+    position: relative;
+    padding: .8em .8em;
+
+    .ratio-one-one {
+      .aspect-ratio(1, 1);
+    }
+    .product-image {
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .select-crosssell-product {
+      height: 2em;
+      width: 2em;
+      margin: 1em auto;
+      border: 2px solid @color-blue;
+      cursor: pointer;
+
+      background-size: contain;
+      background-position: center center;
+      background-repeat:no-repeat;
+
+      &.active-product {
+        background-image: url("../images/done@2x.svg");
+      }
+      &:hover {
+        border: 3px solid @color-blue;
+      }
+    }
+
+    .product-name {
+      .serif-font;
+      font-size: 1.3em;
+      text-align: center;
+      margin-top: 1.4em;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    top: 50%;
+    margin-top: -82px;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+
+    height: 50px;
+    width: 50px;
+    z-index: 201;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    &.slick-prev {
+      left: 0px;
+      background-image: url("../images/icons/configurator/backward_small.svg");
+    }
+    &.slick-next {
+      right: 0px;
+      background-image: url("../images/icons/configurator/forward_small.svg");
+    }
+  }
+
+  .action-wall {
+    position: relative;
+    background: @color-blue;
+    padding: 1em;
+
+    .header-normal {
+      color: white;
+      font-size: 2em;
+      font-family: @font-non-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .header-big {
+      color: white;
+      font-size: 2.2em;
+      font-family: @font-non-serif-bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      .mobile-rules({
+        font-size: 3em;
+      });
+    }
+    .crossseller-action-btn {
+      display: inline-block;
+      padding: .5em 3em;
+      font-size: 14px;
+      line-height: 1.8em;
+      margin: 1em 0 3em 0;
+      color: #fff;
+      background: @color-red;
+      text-transform: uppercase;
+      .non-serif-font;
+      cursor: pointer;
+      .mobile-rules({
+        width: 100%;
+        margin: 0 0 5em 0;
+      });
+      &:hover {
+        background: lighten(@color-red, 8%);
+      }
+
+      &.go-to-straps-btn {
+        display: none;
+      }
+    }
+
+    .cartcrossseller-info {
+      color: @color-red;
+      font-size: 1.2em;
+      font-weight: bold;
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      .mobile-rules({
+        position: relative;
+        margin: 10px;
+      });
+    }
+
+    .space-for-bg {
+      display: none;
+      .aspect-ratio(20,9);
+    }
+
+    .mobile-rules({
+      height: auto;
+      font-size: 0.8em;
+
+
+      h2 {
+        margin-top: 0px;
+      }
+
+      .crossseller-action-btn {
+        margin-bottom: 0em;
+      }
+      .space-for-bg {
+        display: none;
+      }
+
+      .m-align {
+        vertical-align: top;
+      }
+    });
+  }
+}
+
+.checkoutcontainer {
+  .cart-crosseller-container {
+    background: url("../images/extrastrap/extra_strap.jpg") no-repeat !important;
+    background-size: cover !important;
+    background-position:center bottom !important;
+
+
+    .teaser-text {
+      color: @color-blue;
+      font-size: 1.3em;
+      padding-bottom: 1em;
+      .non-serif-font;
+
+      .teaser-text-bold {
+        font-size: 1.8em;
+        .non-serif-font-bold
+      }
+    }
+
+    .teaser-button {
+      background: @color-red;
+      padding: .5em 2em;
+      font-size: 1.1em;
+      //margin-bottom: 8em;
+
+      &:hover {
+        color: #fff !important;
+        background: lighten(@color-red, 8%);
+        border: none !important;
+      }
+      &:active {
+        color: #fff !important;
+        background: lighten(@color-red, 10%);
+        border: none !important;
+      }
+    }
+
+    .space-for-bg {
+      .aspect-ratio(20,9);
+    }
+  }
+}
+
+.startpage {
+  .extra-strap {
+    .entry-image {
+      background-image: url("../images/extrastrap/extra-strap-header.jpg");
+      background-position: center center !important;
+      padding-top: 10em;
+
+      .mobile-rules({
+        padding-top: 2em;
+        height: 350px;
+      });
+
+      @media (max-width: @screen-xs) {
+        background-image: url("../images/extrastrap/extra-strap-header-mobile-new.jpg") !important;
+        height: 250px;
+        background-size: cover;
+      }
+
+    }
+
+    .teaser-text {
+      padding: 1em;
+      width: 550px;
+
+      .subtitle {
+        color: #fff;
+        .non-serif-font;
+        font-size: 2em;
+      }
+
+      .mobile-rules({
+        width: 400px;
+
+        .subtitle {
+          font-size: 1.2em;
+        }
+      });
+
+      .btn {
+        margin-top: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    }
+  }
+
+  #extra-strap-info {
+    margin: 1em 0;
+    .non-serif-font;
+    font-size: 1em;
+
+    @media (max-width: @screen-xs) {
+      text-align: center;
+    }
+  }
+}

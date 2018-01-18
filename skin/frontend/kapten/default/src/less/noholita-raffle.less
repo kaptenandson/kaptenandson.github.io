@@ -1,0 +1,116 @@
+.noholita-raffle {
+  #noholita-raffle-header {
+    .banner-image {
+      display: flex;
+      align-items: center;
+      height: 400px;
+
+
+      background: url("../images/noholita/noholita_header_mobile.jpg") no-repeat center center;
+      background-size: cover;
+    }
+    .kapten-x-noholita-logo {
+      margin-left: 10%;
+      height: 250px;
+      width: 250px;
+
+      background: url("../images/noholita/header-text_black.png") no-repeat center;
+      background-size: contain;
+
+      &.mobile-logo {
+        margin: -65px auto -75px auto;
+      }
+    }
+
+    .page-title {
+      margin: 2em 0;
+    }
+  }
+
+  .noholita-form-container {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    background: @color-gray-light;
+    padding: 2em;
+    text-align: center;
+
+    .form-group {
+      text-align: left;
+      font-size: 1.2em;
+
+      label, input {
+        .non-serif-font;
+        text-shadow: none;
+        letter-spacing: 0.05em;
+      }
+      input {
+        border-radius: 0;
+      }
+
+      .checkbox  {
+        label {
+          font-size: 0.9em;
+        }
+        a{
+          color: @text-muted;
+        }
+        a:hover {
+          color: @color-blue;
+        }
+      }
+
+    }
+
+    #signup-errors {
+      margin-top: 1em;
+      padding: 1em;
+      p {
+       font-size: 0.85em;
+        margin: 0.1em 0;
+        padding: 0;
+        color: darken(@color-red, 10%);
+      }
+    }
+
+    #participate-btn {
+      display: block;
+      width: 100%;
+      margin-top: 1em;
+      font-size: 1.25em;
+      color: #fff;
+      background: @color-red;
+    }
+    .submit-info-box {
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+
+.desktop-rules({
+  .noholita-raffle {
+    #noholita-raffle-header {
+      .banner-image {
+        height: 450px;
+
+        background-image: url("../images/noholita/noholita_header_desktop.jpg");
+      }
+
+    }
+  }
+});
+
+.mobile-rules({
+  .noholita-raffle {
+    .noholita-form-container {
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      #participate-btn {
+        margin-top: 0;
+      }
+    }
+  }
+});

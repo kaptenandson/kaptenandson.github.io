@@ -1,0 +1,60 @@
+.category-products {
+    .products-list {
+        .item {
+            min-height: 35em;
+            .product-image {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+            .product-name {
+                margin: 0;
+                font-size: 1.3em;
+                text-align: center;
+                height: 2.5em;
+                .name-wrap {
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    a {
+                        font-family: 'PT Serif',serif;
+                        color: @color-blue !important;
+                        display: table-cell;
+                    }
+                }
+            }
+            .out-of-stock {
+                text-align: center;
+                margin: 2em 0;
+                font-size: 1.5em;
+                color: @color-blue-light;
+            }
+            .tax-details {
+                display: block;
+                font-size: 0.7em;
+            }
+            .price-and-add {
+                font-family: TradeGothic;
+                font-size: 1.5em;
+                text-align: center;
+                display: block;
+                padding: 1em 0;
+                color: @color-blue !important;
+                .price {
+                    font-weight: 400;
+                }
+                .product-list-add {
+                    display: block;
+                    color: @color-blue !important;
+                    margin: 0.5em 0;
+                }
+                &:hover {
+                    .product-list-add {
+                        color: @color-red !important;
+                    }
+                }
+            }
+        }
+    }
+}
