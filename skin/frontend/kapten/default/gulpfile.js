@@ -98,17 +98,23 @@ gulp.task('css', function () {
 // JS
 gulp.task('js', function () {
     var scripts = [
-        //'bower_components/jquery-ui/jquery-ui.js',
-        //'bower_components/bootstrap/js/transition.js',
-        //'bower_components/bootstrap/js/collapse.js',
-        //'bower_components/bootstrap/js/carousel.js',
-        //'bower_components/bootstrap/js/dropdown.js',
-        //'bower_components/bootstrap/js/modal.js',
-        //'bower_components/bootstrap/js/tab.js',
+        'bower_components/jquery-ui/jquery-ui.js',
+        'bower_components/bootstrap/js/transition.js',
+        'bower_components/bootstrap/js/collapse.js',
+        'bower_components/bootstrap/js/carousel.js',
+        'bower_components/bootstrap/js/dropdown.js',
+        'bower_components/bootstrap/js/modal.js',
+        'bower_components/bootstrap/js/tab.js',
         'src/js/navs.js',
-        //'src/js/script.js',
-        //'src/js/jquery.elevateZoom-3.0.8.min.js',
-        //'src/js/jquery.matchHeight.js',
+        'src/js/script.js',
+        'src/js/checkout.js',
+        'src/js/overlay.js',
+        'src/js/inspirations.js',
+        'src/js/rma.js',
+        'src/js/products.js',
+        'src/js/jquery.elevateZoom-3.0.8.min.js',
+        'src/js/jquery.kapten.productCarousel.js',
+        'src/js/jquery.matchHeight.js',
         'src/js/slick.js'
     ];
 
@@ -124,7 +130,7 @@ gulp.task('js', function () {
         stream = stream.pipe(uglify());
     }
 
-  // move bundle.js
+    // move bundle.js
     bundle = gulp.src('src/js/filter.js').pipe(gulp.dest('js'));
     gulp.src('src/js/scommerce/jquery.cookie.js').pipe(gulp.dest('js'));
     gulp.src('src/js/jquery-2.2.4.min.js').pipe(gulp.dest('js'));
@@ -140,22 +146,34 @@ gulp.task('images', function () {
     var stream = gulp.src('src/images/**/*');
 
     if(config.minifyImages){
-        stream = stream.pipe(imageop({
-            optimizationLevel: 6,
-            progressive: true,
-            interlaced: true
-        }))
+        stream = stream.pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+
+        /*
+        .pipe(imageop({
+                optimizationLevel: 6,
+                progressive: true,
+                interlaced: true
+            }))
+         */
+
+
     }
     stream = stream.pipe(gulp.dest('images'));
 
     return stream;
 
-        // .pipe(notify({message: 'Successfully processed image'}));
-    /*.pipe(imagemin({
-     progressive: true,
-     svgoPlugins: [{removeViewBox: false}],
-     use: [pngquant()]
-     })) */
+    // .pipe(notify({message: 'Successfully processed image'}));
+
 
 });
 
@@ -194,7 +212,7 @@ gulp.task('fonts', function () {
             'src/fonts/**/*'
         ])
         .pipe(gulp.dest('fonts'));
-        // .pipe(notify({message: 'Successfully processed font'}));
+    // .pipe(notify({message: 'Successfully processed font'}));
 });
 
 // Rimraf

@@ -14,7 +14,7 @@
     "gulp-cache": "^0.2.0",
     "gulp-concat": "^2.3.3",
     "gulp-image-optimization": "^0.1.3",
-    "gulp-imagemin": "^2.4.0",
+    "gulp-imagemin": "^4.1",
     "imagemin-gifsicle": "^1",
     "optipng-bin": "^1",
     "gulp-jshint": "^1.7.1",
