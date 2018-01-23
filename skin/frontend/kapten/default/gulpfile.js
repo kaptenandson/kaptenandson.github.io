@@ -98,23 +98,23 @@ gulp.task('css', function () {
 // JS
 gulp.task('js', function () {
     var scripts = [
-        'bower_components/jquery-ui/jquery-ui.js',
-        'bower_components/bootstrap/js/transition.js',
-        'bower_components/bootstrap/js/collapse.js',
-        'bower_components/bootstrap/js/carousel.js',
-        'bower_components/bootstrap/js/dropdown.js',
-        'bower_components/bootstrap/js/modal.js',
-        'bower_components/bootstrap/js/tab.js',
+        // 'bower_components/jquery-ui/jquery-ui.js',
+        // 'bower_components/bootstrap/js/transition.js',
+        // 'bower_components/bootstrap/js/collapse.js',
+        // 'bower_components/bootstrap/js/carousel.js',
+        // 'bower_components/bootstrap/js/dropdown.js',
+        // 'bower_components/bootstrap/js/modal.js',
+        // 'bower_components/bootstrap/js/tab.js',
         'src/js/navs.js',
         'src/js/script.js',
-        'src/js/checkout.js',
-        'src/js/overlay.js',
-        'src/js/inspirations.js',
-        'src/js/rma.js',
-        'src/js/products.js',
-        'src/js/jquery.elevateZoom-3.0.8.min.js',
-        'src/js/jquery.kapten.productCarousel.js',
-        'src/js/jquery.matchHeight.js',
+        // 'src/js/checkout.js',
+        // 'src/js/overlay.js',
+        // 'src/js/inspirations.js',
+        // 'src/js/rma.js',
+        // 'src/js/products.js',
+        // 'src/js/jquery.elevateZoom-3.0.8.min.js',
+        // 'src/js/jquery.kapten.productCarousel.js',
+        // 'src/js/jquery.matchHeight.js',
         'src/js/slick.js'
     ];
 

@@ -30,13 +30,13 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsFileList = [
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/jquery-ui/jquery-ui.js',
-    'bower_components/bootstrap/js/transition.js',
-    'bower_components/bootstrap/js/collapse.js',
-    'bower_components/bootstrap/js/carousel.js',
-    'bower_components/bootstrap/js/dropdown.js',
-    'bower_components/bootstrap/js/modal.js',
+    // 'bower_components/jquery/dist/jquery.js',
+    // 'bower_components/jquery-ui/jquery-ui.js',
+    // 'bower_components/bootstrap/js/transition.js',
+    // 'bower_components/bootstrap/js/collapse.js',
+    // 'bower_components/bootstrap/js/carousel.js',
+    // 'bower_components/bootstrap/js/dropdown.js',
+    // 'bower_components/bootstrap/js/modal.js',
     'src/js/script.js',
     'src/js/navs.js'
   ];
